@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, ProductImage, Cart, CartItem, Product, Category, SubCategory, Review
+from .models import UserProfile, ProductImage, Cart, CartItem, Product, Category, SubCategory, Review, Favorite, FavoriteItem
 from modeltranslation.admin import TranslationAdmin, TranslationInlineModelAdmin
 
 class SubCategoryInline(admin.TabularInline, TranslationInlineModelAdmin):
@@ -56,8 +56,8 @@ class ProductAdmin(TranslationAdmin):
 
 
 admin.site.register(UserProfile)
-admin.site.register(ProductImage)
 admin.site.register(Cart)
 admin.site.register(CartItem)
-
+admin.site.register(Favorite)
+admin.site.register(FavoriteItem)
 
